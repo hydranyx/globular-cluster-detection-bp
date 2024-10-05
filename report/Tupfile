@@ -1,0 +1,1 @@
+: src/*.tex thesis.sty |> tectonic -Z shell-escape --synctex src/main.tex |> main.pdf main.synctex.gz

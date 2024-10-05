@@ -1,0 +1,120 @@
+\usepackage[a4paper, total={6in, 10.5in}]{geometry}
+\usepackage{algorithm}
+\usepackage[italicComments=false]{algpseudocodex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[backend=biber, style=ieee, citestyle=ieee, dashed=false]{biblatex}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage[shortlabels]{enumitem}
+\usepackage[hang,flushmargin,perpage,symbol]{footmisc}
+\usepackage{float}
+\usepackage{blkarray}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{bigstrut}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{underscore}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{mathtools}
+\usepackage[parfill, indent]{parskip}
+\usepackage{pict2e}
+\usepackage[free-standing-units=false]{siunitx}
+\usepackage{subcaption}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{relsize}
+\usepackage{longtable}
+\usepackage{units}
+
+\newcommand{\authorname}{John Smith}
+\newcommand{\authornumber}{S1234567}
+\newcommand{\authoremail}{johnsmith@example.com}
+\newcommand{\supervisors}{John Doe}
+\newcommand{\subtitle}{Subtitle}
+\newcommand{\NB}[1]{N.B.:\ #1}
+\newcommand{\svd}{\tx{SVD}}
+\newcommand{\reason}[1]{\parbox[t]{0.35\textwidth}{\textit{#1}}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\makeatletter
+  \def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+\addbibresource{references.bib}
+\graphicspath{{figures/}}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\newcommand\topstrut[1][1.2ex]{\setlength\bigstrutjot{#1}{\bigstrut[t]}}
+\newcommand\botstrut[1][0.9ex]{\setlength\bigstrutjot{#1}{\bigstrut[b]}}
+
+\makeatletter
+\renewcommand{\maketitle}{%
+    \makeatletter
+    \begin{titlepage}
+        \centering
+        \begin{center}
+            \makebox[\textwidth]{\includegraphics[width=0.9\paperwidth]{00-title-page-rug-logo.pdf}}
+        \end{center}
+        \vspace{0.2\paperheight}
+        \hrule height 0.8pt
+        \vspace{0.3em}
+            {\LARGE\@title{}}\vspace{1em}
+
+        {\large\subtitle{}}
+        \vspace{0.6em}
+        \hrule height 0.8pt
+        \vspace{2em}
+
+        \@author{}, \authornumber{}, \authoremail{}
+
+        \textit{Supervisors:} \supervisors{}
+
+        \@date{}
+    \end{titlepage}
+    \makeatother
+}
+\makeatother
+
+\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\lightyear{ly}
+\DeclareSIUnit\byte{B}
+\DeclareSIUnit\milliarcsecond{mas}
+\DeclareSIUnit\year{yr}
+
+
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\algrenewcommand\algorithmicrequire{\textbf{Initialization:}}
+\algnewcommand\Break{\State{\textbf{break}}}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\newcommand{\tx}[1]{\texttt{#1}}
+\newcommand{\paragraphnewline}{\mbox{}\\}
+\newcommand{\unsure}[1]{{\color{red}#1}}
+\newcommand{\about}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\newcommand{\colored}[2]{{\color{#1}{#2}}}
+\newcommand{\TODO}[1]{{\color{orange}TODO:\ \textbf{#1}}}
+\newcommand{\IDEA}[1]{{\color{green}SUGGESTION:\ \textbf{#1}}}
+\newcommand{\ac}[2]{\multicolumn{1}{#1}{#2}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\pluseq}{\mathrel{+}=}
+
+\DeclareRobustCommand{\diameter}{{\mathpalette\dodiameter\relax}}
+
+\makeatletter
+\newcommand\dodiameter[2]{%
+    \sbox\z@{$#1\m@th\circ$}%
+    \setlength\unitlength{\wd\z@}
+    \begin{picture}(1,1)
+        \roundcap
+        \put(0,0){\box\z@}
+        \put(0,0){\line(1,1){1}}
+    \end{picture}%
+}
+\makeatother

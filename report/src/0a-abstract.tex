@@ -1,0 +1,26 @@
+\begin{abstract}
+    \setcounter{page}{1}
+    \pagenumbering{roman}
+
+    \thispagestyle{plain}
+
+    Globular clusters (\textit{GC}s) are stellar agglomerates of about \num{10000} to \num{100000} stars. They provide an interesting ground to study stellar evolution. The complexity of the Universe makes the precise identification and classification of stellar structures challenging. In this paper, a pipeline for the identification of GCs is developed based on work by M. Mohammadi et al.\footnote{M. Mohammadi, N. Petkov, K. Bunte, R. Peletier, and F.M. Schleif, “Globular Cluster Detection in the Gaia Survey,” \textit{Neurocomputing}, vol. 342, pp. 164–171, 2019.} This pipeline consists of excluding candidate regions through the use of a blob-detection technique. The remaining regions are then processed by the Ant Colony random-walk algorithm. This algorithm investigates a region and provides information on its stellar density in the form of pheromone values. Finally, these results are fed into a \textit{gravity-inspired} clustering algorithm that was developed to interpret the pheromone values to determine potential GCs.
+
+    The aim of the research is to determine the accuracy of the pipeline in classifying GCs and investigate possible improvements. This pipeline is then applied on the Gaia DR2 data-set. Different areas consisting of a variety of stellar objects are selected. Some of these areas contain known GCs (Area 1, 2, and 3), while some do not. Each of these areas is split via a rasterization process into evenly distributed rasters. The accuracy of the pipeline is explored by running it on these different rasters and considering firstly if it finds all known GCs and secondly by considering what other stellar structures it classifies as GCs.
+
+    For the blob-detection technique a cutoff point for the constant representing the minimal acceptable blob size was identified to be $0.2$. Under this cutoff point the blob-detection technique filters away \SI{87.5}{\percent} (813 out of 929) of the candidate rasters and maintains \SI{76.9}{\percent} (20 of the 26) rasters that contain known GCs. For the three areas containing known GCs this is:
+    \begin{itemize}[label={\ding{228}}]
+        \item Area 1: 7 out of 12 rasters containing GCs
+        \item Area 2: 1 out of 1 rasters containing GCs
+        \item Area 3: 16 out of 17 rasters containing GCs
+    \end{itemize}
+    The Ant Colony algorithm coupled with the clustering algorithm applied across the same rasters leads to varying results per execution. Across 5 experiments, an average of $51\pm4$ clusters are found. The combined results over all experiments show that the clustering maintains \SI{43.3}{\percent} (13 out of 30) of the known GCs:
+    \begin{itemize}[label={\ding{228}}]
+        \item Area 1: 7 out of 12 GCs
+        \item Area 2: 1 out of 1 GCs
+        \item Area 3: 5 out of 17 GCs
+    \end{itemize}
+    The results of the full pipeline identifies 41 clusters of which 27 could be identified as known stellar structures. These clusters are (\SI{31.7}{\percent}) 13 GCs, (\SI{12.2}{\percent}) 5 Open Clusters, (\SI{9.8}{\percent}) 4 Galaxies, (\SI{4.9}{\percent}) 2 Dwarf Galaxies, (\SI{2.4}{\percent}) a Molecular Cloud, (\SI{2.4}{\percent}) an Absorption Nebula, and (\SI{2.4}{\percent}) an Emission Nebula. In addition, it finds (\SI{34.1}{\percent}) 14 clusters that do not correspond to a known stellar structure. For Areas 1, 3, and 4 most of the clusters are found consistently across the experiments. However, in Area 2 the clusters are only found sporadically, with each cluster being found only in at most two experiments.
+
+    It is evident from these results that the blob-detection operates as an effective exclusion criteria but with the current constant it does not yet maintain all known GCs. While the pipeline does not identify the majority of the GCs that exist, for those that it is able to identify, it can pinpoint their locations accurately. Further research in tuning the parameters and steering the behavior of the ants is expected to expand the number of GCs identified by the pipeline and to solidify the Ant Colony as a useful tool for exploring the Universe. With further refinement of the process and the synergy of the initial blob filtration and clustering applied on the Ant Colony pheromones, this pipeline can likely be made robust.
+\end{abstract}

@@ -1,0 +1,14 @@
+The reasons why these particular regions were selected:
+
+Area 1:
+This region was also used in the background paper for this thesis \cite{Mohammadi}. It is a region that seems relatively empty (dark and liittel stars respectiveliy) and contains a couple of known GCs that are expected to be ealily found as they stand out from their dark and empty surroundings. 
+
+Area 2:
+This region is chosen because it is more densely packed with stars overall. The intention for this area is to test if the pipeline can find the GC this area contains, under the cirkumstances this area features. As this area is so packed with stars it is a huge dataset already even though the region in comarrison to area 1 is much smaller. Unfortunately I did not find a similarly dense area of this size that features more GCs.
+
+Area 3:
+This has a small and part of a large Magellanic Cloud that contains a super nova remnant, open clusters, galaxies and also some GCs. The Megallanic Clouds are densely packed star regions, in which these GCs lie and it would be interesting to see what stellar objects if any will be classified as clusters in this pipeline.
+
+Area 4:
+This area has no GCs, but contains the close and largely visible Andromeda and Triangulum Galaxies, the question is if these galaxies (which are extremely dense regions) are also classified as GC's, or will they be recognised as too dense areas? These large galaxies lie in the lower Dec range 30 - 50, the Dec range 50 - 70 contains a couple of Nebula (large examples:Heart, Soul, and Pacman Nebula).
+
