@@ -1,0 +1,10 @@
+The reasons why these particular regions were selected:
+
+Area 1:
+This region was also used in the background paper for this thesis \cite{Mohammadi}. It is a region that seems relatively empty (dark and liittel stars respectiveliy) and contains a couple of known GCs that are expected to be ealily found as they stand out from their dark and empty surroundings. 
+
+Area 2:
+This region is chosen because it is more densely packed with stars overall. The intention for this area is to test if the pipeline can find the GC this area contains, under the cirkumstances this area features. As this area is so packed with stars it is a huge dataset already even though the region in comarrison to area 1 is much smaller. Unfortunately I did not find a similarly dense area of this size that features more GCs.
+
+Area 3:
+This is a relatively empty area except for this small Magellanic Cloud.
